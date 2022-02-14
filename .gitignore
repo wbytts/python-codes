@@ -1,0 +1,10 @@
+.vscode/
+.idea/
+__pycache__/
+*.zip
+*.ttc
+*.exe
+
+
+.pickle
+

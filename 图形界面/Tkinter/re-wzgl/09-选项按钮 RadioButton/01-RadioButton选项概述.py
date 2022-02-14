@@ -1,0 +1,9 @@
+"""
+activebackground：鼠标光标在选项按钮上时的背景
+activeforeground：鼠标光标在选项按钮上时的前景
+indicatoron：这个值为0时，可以建立盒子选项按钮
+selectcolor：按钮被选取时的颜色
+selectimage：如果按钮被设置了图像，可以设置选中时显示不同的图像
+value：按钮选项的值
+variable：设置或取得目前选取的单选按钮，它的值通常是IntVar或StringVar
+"""

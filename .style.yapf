@@ -1,0 +1,77 @@
+[style]
+# https://github.com/google/yapf
+"""
+YAPF将以以下方式搜索格式样式:
+1. 命令行指定：--style='{.......}'
+2. 当前文件夹或它的一个父文件夹有 .style.yapf 文件，里面有 [style] 选项
+3. 当前文件夹或它的一个父文件夹有 setup.cfg 文件，里面有 [yapf] 选项
+4. 当前文件夹或它的一个父文件夹有 pyproject.toml 文件，里面有 [tool.yapf] 选项
+5. 在 ~/.config/yapf/style 文件存在，其中有 [style] 选项
+6. 如果上述都不存在，yapf将采用 PEP8
+"""
+
+use_tabs=False # 使用制表符进行缩进
+indent_width=4 # 缩进的宽度
+column_limit=150 # 代码列数限制
+indent_blank_lines=False # 缩进空白行
+indent_closing_brackets=False # 缩进关闭括号
+indent_dictionary_value=False # 缩进字典值
+continuation_align_style=SPACE
+continuation_indent_width=6 # 用于行延续的缩进宽度
+dedent_closing_brackets=False # 取消缩进关闭括号
+disable_ending_comma_heuristic=False # 禁用启发式将每个列表元素放在单独一行上，如果列表以逗号结束
+each_dict_entry_on_separate_line=True # 将每个字典条目放到它自己的行上
+force_multiline_dict=False # 强制将字典设为多行
+align_closing_bracket_with_visual_indent=True # 将右括号与可视缩进对齐
+allow_multiline_dictionary_keys=False # 允许字典键在多行上存在
+allow_multiline_lambdas=False # 允许对lambdas进行多行格式化
+allow_split_before_default_or_named_assigns=True # 允许在参数列表中默认/命名赋值之前进行拆分
+allow_split_before_dict_value=True # 允许在字典值之前进行拆分
+arithmetic_precedence_indication=False # 让空格表示运算符优先级
+blank_lines_around_top_level_definition=2 # 顶级函数和类定义周围的空白行数
+blank_lines_between_top_level_imports_and_variables=1 # 顶级导入和变量定义之间的空白行数
+blank_line_before_class_docstring=False # 在类级文档字符串之前插入空行
+blank_line_before_module_docstring=False # 在模块文档字符串之前插入空行
+blank_line_before_nested_class_or_def=False # 在直接嵌套在另一个'def'或'class'中的'def'或'class'之前插入空行
+join_multiple_lines=True # 将短行合并为一行
+coalesce_brackets=False
+i18n_comment=
+i18n_function_call=
+# 空格控制
+no_spaces_around_selected_binary_operators= # 选定的二元运算符周围不能有空格（逗号分隔）
+spaces_around_default_or_named_assign=False # 在默认或命名赋值周围
+spaces_around_dict_delimiters=True  # 字典定界符周围的空格 { 1: 2 }
+spaces_around_list_delimiters=Ture # 在开始的 '[' 和结束的 ']' 列表分隔符之后添加一个空格
+spaces_around_power_operator=False # Use spaces around the power operator.
+spaces_around_subscript_colon=Ture # 在下标/切片操作符周围使用空格 my_list[1 : 10 : 2]
+spaces_around_tuple_delimiters=Ture # 在元组开头'('和结尾')'分隔符之后添加一个空格 ( 1, 2, 3 )
+spaces_before_comment=2
+space_between_ending_comma_and_closing_bracket=True
+space_inside_brackets=Ture # 使用括号、大括号和圆括号内的空格
+# 代码分隔
+split_all_comma_separated_values=False
+split_all_top_level_comma_separated_values=False
+split_arguments_when_comma_terminated=False
+split_before_arithmetic_operator=False
+split_before_bitwise_operator=True
+split_before_closing_bracket=True
+split_before_dict_set_generator=True
+split_before_dot=False
+split_before_expression_after_opening_paren=False
+split_before_first_argument=False
+split_before_logical_operator=True
+split_before_named_assigns=True
+split_complex_comprehension=False
+split_penalty_after_opening_bracket=300
+split_penalty_after_unary_operator=10000
+split_penalty_arithmetic_operator=300
+split_penalty_before_if_expr=0
+split_penalty_bitwise_operator=300
+split_penalty_comprehension=80
+split_penalty_excess_character=7000
+split_penalty_for_added_line_split=30
+split_penalty_import_names=0
+split_penalty_logical_operator=300
+
+
+

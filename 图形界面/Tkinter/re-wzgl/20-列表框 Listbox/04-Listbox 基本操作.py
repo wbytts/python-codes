@@ -1,0 +1,9 @@
+"""
+Listbox的常用方法：
+    size()：返回列表项目的数量
+    selection_set()：选取特定索引项
+    delete()：删除特定索引项
+    get()：返回指定索引项
+    curselection()：返回选取的项目的索引
+    selection_include()：判断指定索引的项是否被选取
+"""

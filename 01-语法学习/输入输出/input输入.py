@@ -1,0 +1,4 @@
+'''
+input(string) -> string
+
+'''
