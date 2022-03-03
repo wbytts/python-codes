@@ -1,5 +1,6 @@
 import json
 import getpass
+import pickle
 
 username = getpass.getuser()
 # Chrome浏览器会把书签的内容保存在这个文件里面（json的形式）。
@@ -13,6 +14,7 @@ bmp_json = json.load(f)
 f.close()
 
 print(bmp_json)
+pickle.dump(open(r'00~CODE\Chrome书签解析\bmp_json.pickle', 'wb'), bmp_json)
 
 # 获取书签栏
 bookmark_bar = bmp_json['roots']['bookmark_bar']
