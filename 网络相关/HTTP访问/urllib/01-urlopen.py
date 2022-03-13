@@ -18,6 +18,7 @@ data = response.read()
 # 将获取的二进制内容转换成字符串
 str_data = data.decode("utf-8")
 print(str_data)
+
 with open("baidu.html", "w", encoding="utf-8") as f:
     f.write(str_data)
 
