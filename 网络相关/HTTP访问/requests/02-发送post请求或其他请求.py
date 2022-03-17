@@ -10,3 +10,8 @@ r = requests.head('http://httpbin.org/get')
 print(r.text)
 r = requests.options('http://httpbin.org/get')
 print(r.text)
+
+
+
+
+
