@@ -14,6 +14,8 @@ for d in dir_list:
         os.system('git add .')
         os.system('git commit -m "update"')
         os.system('git pull')
+        os.system('git add .')
+        os.system('git commit -m "merge"')
         os.system('git push')
 
 
