@@ -1,10 +1,8 @@
 .vscode/
 .idea/
 __pycache__/
-*.zip
+/*.zip
 *.ttc
 *.exe
-
-
 .pickle
-
+bookmark_list
