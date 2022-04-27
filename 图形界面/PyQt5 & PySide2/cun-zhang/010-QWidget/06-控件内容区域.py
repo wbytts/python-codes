@@ -21,6 +21,7 @@ class Window(QWidget):
         # 设置内容边距
         # 顺序：左上右下
         label.setContentsMargins(50, 20, 0, 0)
+        # 获取内容边距，注意这里是get
         print(label.getContentsMargins())
         print(label.contentsRect())
 
