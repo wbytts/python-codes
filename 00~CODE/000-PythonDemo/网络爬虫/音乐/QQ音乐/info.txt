@@ -1,0 +1,10 @@
+
+歌曲信息地址：
+https://u.y.qq.com/cgi-bin/musics.fcg?-=getUCGI23420490104093972&g_tk=5381&sign=zzaieqn82t4gb1551973fa6baab720517c1852e95a79fd40b&loginUin=0&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq.json&needNewCode=0&data=%7B%22comm%22%3A%7B%22ct%22%3A24%2C%22cv%22%3A0%7D%2C%22songinfo%22%3A%7B%22method%22%3A%22get_song_detail_yqq%22%2C%22param%22%3A%7B%22song_type%22%3A0%2C%22song_mid%22%3A%22001GAAVj1GjW8F%22%2C%22song_id%22%3A245340206%7D%2C%22module%22%3A%22music.pf_song_detail_svr%22%7D%7D
+
+歌词地址：
+https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_yqq.fcg?nobase64=1&musicid=245340206&-=jsonp1&g_tk_new_20200303=5381&g_tk=5381&loginUin=0&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq.json&needNewCode=0
+
+
+实际歌曲下载地址：
+https://isure.stream.qqmusic.qq.com/C400002R4stU3QlEQE.m4a?guid=9736701905&vkey=2AAEEB37CCC685877FA1AD42367F6557560F8BB5E256C6ABB82EA8CE5F569025D5053803664E400294F1951261911E7ABB8EDB65C03C2E03&uin=3363&fromtag=66

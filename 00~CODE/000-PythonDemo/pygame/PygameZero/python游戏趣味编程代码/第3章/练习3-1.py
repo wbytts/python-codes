@@ -1,0 +1,26 @@
+import pgzrun
+
+def draw():
+    screen.fill('white')
+    screen.draw.circle((400, 300), 10, 'black')
+    screen.draw.circle((400, 300), 20, 'black')
+    screen.draw.circle((400, 300), 30, 'black')
+    screen.draw.circle((400, 300), 40, 'black')
+    screen.draw.circle((400, 300), 50, 'black')
+    screen.draw.circle((400, 300), 60, 'black')
+    screen.draw.circle((400, 300), 70, 'black')
+    screen.draw.circle((400, 300), 80, 'black')
+    screen.draw.circle((400, 300), 90, 'black')
+    screen.draw.circle((400, 300), 100, 'black')
+    screen.draw.circle((400, 300), 110, 'black')
+    screen.draw.circle((400, 300), 120, 'black')
+    screen.draw.circle((400, 300), 130, 'black')
+    screen.draw.circle((400, 300), 140, 'black')
+    screen.draw.circle((400, 300), 150, 'black')
+    screen.draw.circle((400, 300), 160, 'black')
+    screen.draw.circle((400, 300), 170, 'black')
+    screen.draw.circle((400, 300), 180, 'black')
+    screen.draw.circle((400, 300), 190, 'black')
+    screen.draw.circle((400, 300), 200, 'black')
+
+pgzrun.go()
