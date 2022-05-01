@@ -1,0 +1,18 @@
+2022-04-28 15:47:02.696 | ERROR    | __main__:nested:12 - What?!
+Traceback (most recent call last):
+
+  File "E:\my-projects\python-code-demos\日志\loguru\008-详细的异常回溯.py", line 14, in <module>
+    nested(0)
+    └ <function nested at 0x000001B5FA5C2170>
+
+> File "E:\my-projects\python-code-demos\日志\loguru\008-详细的异常回溯.py", line 10, in nested
+    func(5, c)
+    │       └ 0
+    └ <function func at 0x000001B5F2513E20>
+
+  File "E:\my-projects\python-code-demos\日志\loguru\008-详细的异常回溯.py", line 6, in func
+    return a / b
+           │   └ 0
+           └ 5
+
+ZeroDivisionError: division by zero

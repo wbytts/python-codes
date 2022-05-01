@@ -1,0 +1,28 @@
+2022-04-28T15:47:32.510932+0800 - ERROR - An error has been caught in function '<module>', process 'MainProcess' (23328), thread 'MainThread' (22572):
+Traceback (most recent call last):
+
+> File "E:\my-projects\python-code-demos\日志\loguru\005-在主进程和线程中捕获异常.py", line 9, in <module>
+    res = my_function(0,0,0)
+          └ <function my_function at 0x0000020ACBFBC820>
+
+  File "E:\my-projects\python-code-demos\日志\loguru\005-在主进程和线程中捕获异常.py", line 7, in my_function
+    return 1 / (x + y + z)
+                │   │   └ 0
+                │   └ 0
+                └ 0
+
+ZeroDivisionError: division by zero
+2022-04-28T15:48:01.363953+0800 - ERROR - An error has been caught in function '<module>', process 'MainProcess' (12596), thread 'MainThread' (12684):
+Traceback (most recent call last):
+
+> File "E:\my-projects\python-code-demos\日志\loguru\005-在主进程和线程中捕获异常.py", line 11, in <module>
+    res = my_function(0, 1, -1)
+          └ <function my_function at 0x000001FB3147C820>
+
+  File "E:\my-projects\python-code-demos\日志\loguru\005-在主进程和线程中捕获异常.py", line 8, in my_function
+    return 1 / (x + y + z)
+                │   │   └ -1
+                │   └ 1
+                └ 0
+
+ZeroDivisionError: division by zero

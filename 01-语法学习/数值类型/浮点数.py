@@ -11,3 +11,6 @@ a = 3.0
 print(a.is_integer())
 
 # as_integer_ratio
+
+
+
