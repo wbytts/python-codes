@@ -13,7 +13,5 @@ print(img.shape)
 res = np.zeros((100, img.shape[1], 3))
 
 
-
-
 cv2.waitKey(0)
 cv2.destroyAllWindows()

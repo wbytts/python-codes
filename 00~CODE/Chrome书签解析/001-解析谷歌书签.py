@@ -13,8 +13,8 @@ f = open(bms_path, encoding='utf8')
 bmp_json = json.load(f)
 f.close()
 
-print(bmp_json)
-pickle.dump(open(r'00~CODE\Chrome书签解析\bmp_json.pickle', 'wb'), bmp_json)
+# print(bmp_json)
+pickle.dump(bmp_json, open(r'./chrome-bookmark.pickle', 'wb'))
 
 # 获取书签栏
 bookmark_bar = bmp_json['roots']['bookmark_bar']
@@ -33,17 +33,20 @@ child的属性说明：
     url: 如果是网址，则会有这个属性，标识书签的地址
 '''
 
-# def iter_bmp(obj):
-#     for item in obj:
-#         if item.get('type') == 'url':
-#             print(item['name'])
-#             print(item['url'])
-#             item['name'] += '?'
-#             print('-' * 100)
-#         elif item.get('type') == 'folder':
-#             iter_bmp(item['children'])
+def iter_bmp(obj):
+    """
+    递归遍历书签信息
+    """
+    for item in obj:
+        if item.get('type') == 'url':
+            print(item['name'])
+            print(item['url'])
+            item['name'] += '?'
+            print('-' * 100)
+        elif item.get('type') == 'folder':
+            iter_bmp(item['children'])
 
 
-# iter_bmp(bookmark_bar['children'])
+iter_bmp(bookmark_bar['children'])
 
 
