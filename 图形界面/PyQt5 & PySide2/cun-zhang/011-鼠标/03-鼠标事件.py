@@ -4,24 +4,24 @@ import sys
 
 class MyWin(QWidget):
     # QMouseEvent
-    def mouseMoveEvent(self, QMouseEvent):
-        print('WWWWW', QMouseEvent.globalPos())  # 参考QMouseEvent文档，重点是全局和局部位置
-        return super().mouseMoveEvent(QMouseEvent)
+    def mouseMoveEvent(self, e: QMouseEvent):
+        print('WWWWW', e.globalPos())  # 参考QMouseEvent文档，重点是全局和局部位置
+        return super().mouseMoveEvent(e)
 
-    def mousePressEvent(self, QShowEvent):
+    def mousePressEvent(self, e: QShowEvent):
         print('鼠标按下')
 
-    def mouseReleaseEvent(self, QShowEvent):
+    def mouseReleaseEvent(self, e: QShowEvent):
         print('鼠标松开')
 
-    def mouseDoubleClickEvent(self, QShowEvent):
+    def mouseDoubleClickEvent(self, e: QShowEvent):
         print('鼠标双击')
 
-    def enterEvent(self, QEvent):
+    def enterEvent(self, e: QEvent):
         print('鼠标进入事件')
         self.setStyleSheet("background-color:red;")
 
-    def leaveEvent(self, QEvent):
+    def leaveEvent(self, e: QEvent):
         print('鼠标离开事件')
         self.setStyleSheet("background-color:green;")
 
