@@ -1,10 +1,12 @@
 # 初学者不清楚各个类来自什么包，所以统一全部引入
 from PyQt5.Qt import *
 import sys
+from qt_material import apply_stylesheet
 
 # QApplication：qt的应用程序对象
 # sys.argv 命令行参数
 app = QApplication(sys.argv)
+apply_stylesheet(app, theme='dark_teal.xml')
 
 window = QWidget()  # 创建窗口对象
 window.setWindowTitle("软件名称")  # 设置窗口标题

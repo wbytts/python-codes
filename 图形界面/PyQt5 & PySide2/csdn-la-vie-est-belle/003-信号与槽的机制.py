@@ -1,6 +1,11 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton
 
+"""
+把信号视作裁判鸣枪，而用于行动的槽函数则视作选手开跑，当裁判鸣枪后(即信号发出)，选手就开始往前跑(槽函数启动)
+PyQt5中各个对象间或各个对象自身就是通过信号与槽机制来相互通信的
+"""
+
 
 # 该类继承QWidget，可以将QWidget看作是一种毛坯房，还没有装修，
 # 而我们往其中放入QPushButton、QLabel等控件就相当于在装修这间毛坯房

@@ -1,0 +1,5 @@
+QLabel{
+    border-image:url(border-image.png) 55px repeat;
+    border-image:url(border-image.png) 33.33% repeat;
+    border-width:27px;
+}

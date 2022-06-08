@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QLCDNumber, QVBoxLayout
-
+from qt_material import apply_stylesheet
 
 class Demo(QWidget):
     def __init__(self):
@@ -55,6 +55,7 @@ class Demo(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    apply_stylesheet(app, theme='dark_lightgreen.xml')
     demo = Demo()
     demo.show()
     sys.exit(app.exec_())

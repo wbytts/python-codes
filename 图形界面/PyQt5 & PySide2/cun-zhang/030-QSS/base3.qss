@@ -1,0 +1,20 @@
+/*
+QLabel{
+    border-width:5px;
+    border-style:dotted dashed solid double;
+    border-color:red;
+}
+
+QLabel{
+    border-width:2px 5px 10px 15px;
+    border-width:2px 10px;  // 上下  左右
+    border-style:solid;
+    border-color:red;
+}
+*/
+QLabel {
+    border-color: green black blue red;
+    border-color: green black;
+    border-style: solid;
+    border-width: 5px;
+}
