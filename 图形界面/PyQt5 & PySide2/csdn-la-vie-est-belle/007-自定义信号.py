@@ -25,6 +25,7 @@ class Demo(QWidget):
         mousePressEvent()方法是许多控件自带的，这里来自于QWidget。
         方法用来监测鼠标是否有按下。现在鼠标若被按下，则会发出自定义的信号。
         """
+        # 触发自定义信号
         self.my_signal.emit()
 
 

@@ -1,4 +1,4 @@
-from Databases.MySQL.pymysql.pymysql_helper import MysqlHelper
+from MySQL.pymysql.pymysql_helper import MysqlHelper
 
 db_tools = MysqlHelper(host='39.96.162.54',
                        username='root',
