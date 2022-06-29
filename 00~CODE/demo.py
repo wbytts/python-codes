@@ -1,22 +1,30 @@
+from selenium import webdriver
+import time
 
-lis = [
-    313.29, 208.28, 304.15, 299.57,
-    924.00, 800, 800, 800, 800,
-    94.34, 94.34, 94.34, 94.34, 94.34, 94.34, 94.34, 94.34, 94.34,
-    706.20, 706.20, 706.20, 706.20,
-    1966.26, 1524.12, 1524.12, 1524.12, 1524.12, 1524.14, 1007.17, 1007.17, 1007.16, 713.04,
-    1938.75, 135, 139.5, 135, 139.6, 9135,
-    1011.73, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000,
-    1904.82, 1446.43, 1300.04, 1080.86, 1080.86, 1080.88, 804.98, 622.71, 531.57, 412.92,
-    421.21, 421.21, 421.21, 421.21, 421.21, 421.21, 421.21, 421.21,
-    3750, 3750, 3850,
-]
+driver = webdriver.Chrome()
 
-sum = 0
-for x in lis:
-    sum += x
+driver.get('http://www.baidu.com')
+driver.find_element_by_id('kw').send_keys("美女")
 
-print(sum)
+driver.find_element_by_css_selector(r"")
+
+handles = driver.window_handles
+for i in range(1000):
+    driver.switch_to.window(handles[0])
+    driver.find_element_by_id('su').click()
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="1"]/div/h3/a').click()
+    time.sleep(1)
+    handles = driver.window_handles
+    driver.switch_to.window(handles[1])
+    time.sleep(1)
+    driver.close()
+
+
+driver.close()
+driver.quit()
+
+
 
 
 
