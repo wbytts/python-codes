@@ -3,8 +3,6 @@ from sqlalchemy import create_engine, MetaData
 from sqlalchemy import Table, Column, Integer, String
 
 
-
-
 class MyTest(unittest.TestCase):
 
     engine = None
@@ -12,8 +10,8 @@ class MyTest(unittest.TestCase):
     metadata = None
 
     @classmethod
-    def setUpClass(cls) -> None: # 在整个测试类中，setUpClass 方法只执行一次
-        cls.engine = create_engine('mysql+pymysql://root:123456@127.0.0.1:3306/demo', echo=False, pool_recycle=3600)
+    def setUpClass(cls) -> None:  # 在整个测试类中，setUpClass 方法只执行一次
+        cls.engine = create_engine('mysql+pymysql://root:root@127.0.0.1:3306/demo', echo=False, pool_recycle=3600)
         cls.connection = cls.engine.connect()
         cls.metadata = MetaData()
         cls.init_table()

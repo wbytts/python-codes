@@ -1,10 +1,10 @@
 a = [1, 2, 3, 4]
 b = [5, 6, 7, 8]
 
-# 默认返回 zip 类型
+# 默认返回 zip py类型检查
 print(zip(a, b))
 
-# zip 类型
+# zip py类型检查
 for x, y in zip(a, b):
     print(x, y)
 

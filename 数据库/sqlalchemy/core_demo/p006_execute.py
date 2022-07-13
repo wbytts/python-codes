@@ -9,7 +9,7 @@ from sqlalchemy import insert
 from sqlalchemy.sql import select
 
 # 创建一个 SQLAlchemy 引擎
-engine = create_engine('mysql+pymysql://root:123456@127.0.0.1:3306/demo', echo=False, pool_recycle=3600)
+engine = create_engine('mysql+pymysql://root:root@127.0.0.1:3306/demo', echo=False, pool_recycle=3600)
 
 # 打开数据库，得到一个数据库连接
 connection = engine.connect()
@@ -33,12 +33,15 @@ execute() 方法：
     execute再通过调用该方法的连接把SQL语句发送到数据库，然后数据库执行语句并返回操作结果
 '''
 
-ins = user.insert()
-result = connection.execute(
-    ins,  # SQL语句，下面是对应的参数
-    username="zhangsan",
-    password="333333"
-)
+result = connection.execute("select * from user")
+print(result.fetchall())
+
+# ins = user.insert()
+# result = connection.execute(
+#     ins,  # SQL语句，下面是对应的参数
+#     username="zhangsan",
+#     password="333333"
+# )
 
 # 关闭连接
 connection.close()

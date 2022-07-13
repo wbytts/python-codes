@@ -20,7 +20,7 @@ print(str_cp.value)
 
 '''
 常见的对应关系：
-    ctypes 类型     C/C++ 类型                               python类型
+    ctypes py类型检查     C/C++ py类型检查                               python类型
     c_bool          _Bool                                    bool
     c_char          char                                     string
     c_wchar         wchar_t                                  string

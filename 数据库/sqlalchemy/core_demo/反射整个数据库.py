@@ -12,7 +12,11 @@ metadata = MetaData()
 sqlalchemy根据表名来反射表
 注：区分表名的大小写，在某些数据库中可能会发生错误
 """
+
+# 反射整个数据库
 metadata.reflect(bind=engine)
+
+# 获得数据库中的所有表的表名（表名是否区分大小写，具体的数据库不一样）
 table_name_list = metadata.tables.keys()
 print(table_name_list)
 

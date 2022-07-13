@@ -29,6 +29,7 @@ user = Table('user', metadata,
              Column('username', String(20), nullable=False),
              Column('password', String(100), nullable=False)
              )
+
 order = Table('orders', metadata,
               Column('id', Integer(), primary_key=True),
               Column('order_name', String(20), nullable=False),

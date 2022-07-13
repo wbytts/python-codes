@@ -1,15 +1,12 @@
 from datetime import datetime
-from sqlalchemy import create_engine, MetaData
-from sqlalchemy import Table, Column
-from sqlalchemy import Integer, Numeric, String, DateTime
-from sqlalchemy import ForeignKey
-from sqlalchemy import PrimaryKeyConstraint, UniqueConstraint, CheckConstraint
-from sqlalchemy.sql import select, insert
+from sqlalchemy.engine import create_engine
+from sqlalchemy.schema import MetaData, Table, Column, ForeignKey, ForeignKeyConstraint, PrimaryKeyConstraint, UniqueConstraint, CheckConstraint
+from sqlalchemy.types import Integer, Numeric, String, DateTime
+from sqlalchemy.sql import select, insert, update, delete
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, backref
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, relationship, backref
 
-engine = create_engine('mysql+pymysql://root:123456@127.0.0.1:3306/demo', echo=True, pool_recycle=3600)
+engine = create_engine('mysql+pymysql://root:root@127.0.0.1:3306/demo', echo=True, pool_recycle=3600)
 connection = engine.connect()
 metadata = MetaData()
 Base = declarative_base()
@@ -18,16 +15,20 @@ Base = declarative_base()
 Session = sessionmaker(bind=engine)
 session = Session()
 
+
 class Book(Base):
     __tablename__ = 'book'
-    __table_args__ = (  )  # 约束
+    __table_args__ = (
+        CheckConstraint(age >= 0)
+    )  # 约束
 
-    id = Column(Integer(), primary_key=True)
+    id = Column(Integer, primary_key=True)
     name = Column(String(255))
     author = Column(String(255))
+    age = Column(Integer)
 
-    create_date = Column(DateTime(), default=datetime.now)
-    update_date = Column(DateTime(), default=datetime.now, onupdate=datetime.now)
+    create_date = Column(DateTime, default=datetime.now)
+    update_date = Column(DateTime, default=datetime.now, onupdate=datetime.now)
 
 
 # 模型的持久化
@@ -48,7 +49,6 @@ session.add(book)
 b1 = Book(name='asdasd', author='大佬')
 b2 = Book(name='qweqweqwe', author='大佬')
 session.bulk_save_objects([b1, b2])
-
 
 # flush 与 commit 相似，但是 flush 不会执行数据库提交并结束事务
 # session.flush()

@@ -9,7 +9,7 @@ from sqlalchemy import insert
 from sqlalchemy.sql import select
 
 # 创建一个 SQLAlchemy 引擎
-engine = create_engine('mysql+pymysql://root:123456@127.0.0.1:3306/demo', echo=False, pool_recycle=3600)
+engine = create_engine('mysql+pymysql://root:root@127.0.0.1:3306/demo', echo=True, pool_recycle=3600)
 
 # 打开数据库，得到一个数据库连接
 connection = engine.connect()

@@ -9,7 +9,7 @@ from sqlalchemy import insert
 from sqlalchemy.sql import select
 
 # 创建一个 SQLAlchemy 引擎
-engine = create_engine('mysql+pymysql://root:123456@127.0.0.1:3306/demo', echo=False, pool_recycle=3600)
+engine = create_engine('mysql+pymysql://root:root@127.0.0.1:3306/demo', echo=False, pool_recycle=3600)
 
 # 打开数据库，得到一个数据库连接
 connection = engine.connect()
@@ -27,11 +27,17 @@ user = Table('user', metadata,
 metadata.create_all(engine)
 
 # 插入数据1：使用Table对象的 insert 方法生成sql语句
+
+# INSERT INTO "user" (id, username, password) VALUES (:id, :username, :password)
 print(user.insert())
+
 s = user.insert().values(username="wangby", password="123456")
-print('要执行的SQL --> ' + str(s))
-print('实际传递的参数 --> ' + str(s.compile().params))
+print('要执行的SQL --> ' + str(s))  # INSERT INTO "user" (username, password) VALUES (:username, :password)
+print('实际传递的参数 --> ' + str(s.compile().params))  # {'username': 'wangby', 'password': '123456'}
+
+# 执行SQL
 rp = connection.execute(s)
+
 # 获取插入完成后的主键
 print('插入成功的主键 --> ' + str(rp.inserted_primary_key))
 

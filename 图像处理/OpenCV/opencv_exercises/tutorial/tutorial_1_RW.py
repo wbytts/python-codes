@@ -34,7 +34,7 @@ def video_demo():
     # 例如，我可以使用 capture.get(3) 和 cap.get(4) 来查看每一帧的宽和高。默认情况下得到的值是 640X480。
     # 但是我可以使用 ret=capture.set(3,320) 和 ret=capture.set(4,240) 来把宽和高改成 320X240
     capture = cv.VideoCapture(0)
-    print("类型",type(capture))
+    print("py类型检查",type(capture))
     while True:
         ret, frame = capture.read()  # 获取相机图像，返回ret(结果为True/False)，和每一帧图片
         frame = cv.flip(frame, 1)  # 将图片水平翻转，竖直翻转为0

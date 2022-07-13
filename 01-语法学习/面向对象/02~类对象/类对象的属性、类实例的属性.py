@@ -33,7 +33,7 @@ print(dir(Person))
 
 # 对象有一个 __class__ 属性
 print(p.__class__)  # <class '__main__.Person'> 打印出了这个对象对应的类型
-print(Person.__class__)  # <class 'type'> 类型？是Person的类型是类型吗？
+print(Person.__class__)  # <class 'type'> py类型检查？是Person的类型是类型吗？
 
 # p 可以通过 __class__ 属性找到 Person
 # 访问p里面的属性时，如果p没有这个属性，就会通过 __class__ 找到类，然后去找类的属性
